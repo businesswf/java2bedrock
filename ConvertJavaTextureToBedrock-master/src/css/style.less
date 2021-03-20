@@ -1,0 +1,121 @@
+@import (less) "~materialize-css/dist/css/materialize.min.css";
+
+html, body {
+  .white;
+  .black-text;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  .white;
+  .black-text;
+  align-items: center;
+  border-color: currentColor;
+  border-style: dashed;
+  border-width: 5px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  min-height: 100px;
+
+  &.dragover {
+    .brown-text;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.swal-modal {
+  width: 80%; // Make modal bigger to show a log on one line
+}
+
+.swal-button {
+  .green; // Color for sweetalert buttons
+}
+
+.log {
+  .grey.lighten-3;
+  .black-text;
+  height: 160px;
+  overflow: auto;
+}
+
+footer {
+  padding-top: 0 !important;
+
+  .switch {
+    label {
+      .yellow-text;
+
+      input[type=checkbox]:checked + .lever,
+      input[type=checkbox]:checked + .lever:after {
+        .yellow;
+      }
+
+      :active:before {
+        background-color: transparent !important;
+        transition: none !important;
+      }
+    }
+  }
+}
+
+#toastMessage {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  transition-duration: 300ms;
+  transition-property: opacity, top, visibility;
+  visibility: hidden;
+
+  &[data-show] {
+    opacity: 1;
+    top: 20px;
+    visibility: visible;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    .grey.darken-4;
+    .white-text;
+  }
+
+  main {
+    .grey.darken-4;
+    .white-text;
+  }
+
+  .swal-modal {
+    .grey.darken-4;
+    .white-text;
+  }
+
+  .swal-title {
+    .white-text;
+  }
+
+  .swal-icon--success {
+    &::before,
+    &::after,
+    &__hide-corners {
+      background-color: transparent;
+    }
+  }
+
+  .log {
+    .grey.darken-3;
+    .white-text;
+  }
+
+  .btn.disabled {
+    .grey.darken-3;
+  }
+}

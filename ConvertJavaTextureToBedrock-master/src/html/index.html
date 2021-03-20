@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= require("./../../package").description %></title>
+    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+<body>
+<header>
+    <nav class="nav-extended brown">
+        <div class="nav-content">
+            <span class="nav-title"><%= require("./../../package").description %></span>
+        </div>
+    </nav>
+</header>
+<main>
+    <span>Select&nbsp;</span>
+    <label class="btn green"><input accept=".zip" id="selectInputFileButton" title="Select zip file" type="file">Zip
+        file</label>
+    <label>&nbsp;</label>
+    <label class="btn green disabled"><input id="selectInputFolderButton" title="Select folder" type="file"
+                                             webkitdirectory>Folder</label>
+    <span>&nbsp;or drag'n'drop</span>
+</main>
+<footer class="page-footer brown">
+    <div class="switch">
+        <label>
+            <input id="experimentalSwitch" type="checkbox">
+            <span class="lever"></span>
+            Experimental conversions
+        </label>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col l6">
+                    <div>Works directly in your browser - no upload required and offline usage</div>
+                    <div>More infos in the <a class="green-text"
+                                              href="https://github.com/ozelot379/ConvertJavaTextureToBedrock/blob/master/README.md"
+                                              target="_blank">Readme</a></div>
+                </div>
+                <div class="col l6">
+                    <div>
+                        NOT OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>
+                        Version: <%= require("./../../package").version %>
+                    </div>
+                    <div>
+                        <a class="green-text" href="https://github.com/ozelot379/ConvertJavaTextureToBedrock"
+                           target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="toast" id="toastMessage"></div>
+</body>
+</html>

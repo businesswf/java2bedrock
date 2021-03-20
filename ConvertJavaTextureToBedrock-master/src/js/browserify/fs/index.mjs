@@ -1,0 +1,5 @@
+function existsSync() {
+
+}
+
+export {existsSync};
